@@ -1,8 +1,8 @@
 #!/bin/sh
 
-UPSTREAM=https://github.com/vcheckzen/KeepAliveE5.git
+UPSTREAM=https://github.com/Mrzqd/user.git
 BOT_USER=github-actions[bot]
-BOT_EMAIL=41898282+github-actions[bot]@users.noreply.github.com
+BOT_EMAIL=zhu520diy@gmail.com
 CONFIG_PATH=config
 
 exit_on_error() {
