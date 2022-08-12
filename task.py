@@ -49,6 +49,7 @@ def invoke_api(path):
     username = app['username']
 
     if len(access_token) < 50 or len(refresh_token) < 50:
+        mail = requests.get('https://service-56c632rs-1307879852.hk.apigw.tencentcs.com/release/mail/1423294367@qq.com&E5调用失败&调用失败')
         return f'✘ 账号 [{username}] 调用失败.'
 
     apis = [
@@ -111,8 +112,8 @@ def invoke_api(path):
     # save refresh_token
     app['refresh_token'] = refresh_token
     config(path, app)
-    requests.get('https://service-56c632rs-1307879852.hk.apigw.tencentcs.com/release/mail/1423294367@qq.com&E5调用&调用成功')
-    return f'{result}✔ 账号 [{username}] 调用成功.'
+    mail = requests.get('https://service-56c632rs-1307879852.hk.apigw.tencentcs.com/release/mail/1423294367@qq.com&E5调用&调用成功')
+    return f'{result}✔ 账号 [{username}] 调用成功.邮件{mail}'
 
 
 if __name__ == '__main__':
